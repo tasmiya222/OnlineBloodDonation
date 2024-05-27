@@ -1,4 +1,4 @@
-﻿
+﻿@model OnlineBloodBank.Models.AdminModelView
 @{
     Layout = null;
 }
@@ -7,7 +7,7 @@
 
 <head>
 
-    
+
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,41 +49,33 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src="~/Content/Admin/assets/images/icon/logo.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+
+                            @using (Html.BeginForm("LoginToAdmin", "Admin", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
+
                                 <div class="form-group">
                                     <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "au-input au-input--full", type = "email" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                    @Html.PasswordFor(m => m.password, new { @class = "au-input au-input--full" })
+                                    @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+
                                 </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
-                                    <label>
-                                        <a href="#">Forgotten Password?</a>
-                                    </label>
-                                </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                                <div class="social-login-content">
-                                    <div class="social-button">
-                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
-                                        <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="register-link">
-                                <p>
-                                    Don't you have account?
-                                    <a href="#">Sign Up Here</a>
-                                </p>
-                            </div>
+                                <input class="au-btn au-btn--block au-btn--green m-b-20" type="submit" value="submit" />
+
+                            }
+
                         </div>
                     </div>
                 </div>
