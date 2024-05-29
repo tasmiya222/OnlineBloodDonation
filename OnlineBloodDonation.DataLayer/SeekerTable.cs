@@ -29,11 +29,13 @@ namespace OnlineBloodDonation.DataLayer
         public string CINC { get; set; }
         public Nullable<int> GenderID { get; set; }
         public Nullable<System.DateTime> RegistrationDate { get; set; }
+        public Nullable<int> UserID { get; set; }
     
         public virtual BloodGroupsTable BloodGroupsTable { get; set; }
         public virtual CityTable CityTable { get; set; }
         public virtual GenderTable GenderTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestTable> RequestTables { get; set; }
+        public virtual UserTable UserTable { get; set; }
     }
 }

@@ -22,8 +22,10 @@ namespace OnlineBloodDonation.DataLayer
         public string Location { get; set; }
         public Nullable<int> BloodGroupID { get; set; }
         public Nullable<int> CityID { get; set; }
+        public Nullable<int> UserID { get; set; }
     
         public virtual BloodGroupsTable BloodGroupsTable { get; set; }
         public virtual CityTable CityTable { get; set; }
+        public virtual UserTable UserTable { get; set; }
     }
 }

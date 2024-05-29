@@ -37,5 +37,9 @@ namespace OnlineBloodDonation.DataLayer
         public virtual DbSet<RequestTypeTable> RequestTypeTables { get; set; }
         public virtual DbSet<SeekerTable> SeekerTables { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<AccountStatusTable> AccountStatusTables { get; set; }
+        public virtual DbSet<UserTable> UserTables { get; set; }
+        public virtual DbSet<UserTypeTable> UserTypeTables { get; set; }
+
     }
 }

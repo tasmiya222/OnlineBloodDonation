@@ -12,27 +12,18 @@ namespace OnlineBloodDonation.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class HospitalTable
+    public partial class AccountStatusTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HospitalTable()
+        public AccountStatusTable()
         {
-            this.RequestTables = new HashSet<RequestTable>();
+            this.UserTables = new HashSet<UserTable>();
         }
     
-        public int HospitalID { get; set; }
-        public string FullName { get; set; }
-        public string Address { get; set; }
-        public string PhoneNo { get; set; }
-        public string website { get; set; }
-        public string Email { get; set; }
-        public string Location { get; set; }
-        public Nullable<int> CityID { get; set; }
-        public Nullable<int> UserID { get; set; }
+        public int AccountStatusID { get; set; }
+        public string AccountStatus { get; set; }
     
-        public virtual CityTable CityTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RequestTable> RequestTables { get; set; }
-        public virtual UserTable UserTable { get; set; }
+        public virtual ICollection<UserTable> UserTables { get; set; }
     }
 }

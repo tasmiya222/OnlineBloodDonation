@@ -30,6 +30,15 @@
         <AssociationConnector Association="OnlineBloodBankdbModel.FK__RequestTa__Hospi__45F365D3" ManuallyRouted="false" />
         <AssociationConnector Association="OnlineBloodBankdbModel.FK__RequestTa__Reque__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="OnlineBloodBankdbModel.FK__RequestTa__Seeke__44FF419A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OnlineBloodBankdbModel.AccountStatusTable" Width="1.5" PointX="10.375" PointY="5.875" />
+        <EntityTypeShape EntityType="OnlineBloodBankdbModel.UserTable" Width="1.5" PointX="12.625" PointY="1" />
+        <EntityTypeShape EntityType="OnlineBloodBankdbModel.UserTypeTable" Width="1.5" PointX="10.375" PointY="1.875" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__UserTable__Accou__07C12930" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__BloodBank__UserI__08B54D69" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__DonorTabl__UserI__09A971A2" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__HospitalT__UserI__0A9D95DB" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__SeekerTab__UserI__0B91BA14" />
+        <AssociationConnector Association="OnlineBloodBankdbModel.FK__UserTable__UserT__0E6E26BF" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

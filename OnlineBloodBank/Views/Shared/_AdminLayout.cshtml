@@ -93,11 +93,15 @@
                                     <li>
                                         <a href="~/Views/Admin/Home.cshtml">Dashboard</a>
                                     </li>
-                                
+
                                 </ul>
                             </li>
-                          
-                          
+                            <li class="active">
+                                <a href="@Url.Action("AllRequesttype","RequestType")">
+                                    <i class="fas fa-table"></i>Request Type
+                                </a>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>
@@ -117,7 +121,7 @@
                                     </button>
                                 </form>
                                 <div class="header-button">
-                                    
+
                                     <div class="account-wrap">
                                         <div class="account-item clearfix js-item-menu">
                                             <div class="image">
@@ -154,32 +158,35 @@
                     </div>
                 </header>
                 <!-- HEADER DESKTOP-->
-                @RenderBody()
+                <div class="main-content">
+                    <div class="section__content section__content--p30">
 
+                        @RenderBody()
+
+                    </div>
                 </div>
-            </div>
-            <!-- Jquery JS-->
-            <script src="~/Content/Admin/assets/vendor/jquery-3.2.1.min.js"></script>
-            <!-- Bootstrap JS-->
-            <script src="~/Content/Admin/assets/vendor/bootstrap-4.1/popper.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
-            <!-- Vendor JS       -->
-            <script src="~/Content/Admin/assets/vendor/slick/slick.min.js">
-            </script>
-            <script src="~/Content/Admin/assets/vendor/animsition/animsition.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/wow/wow.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-            </script>
-            <script src="~/Content/Admin/assets/vendor/counter-up/jquery.waypoints.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/counter-up/jquery.counterup.min.js">
-            </script>
-            <script src="~/Content/Admin/assets/vendor/circle-progress/circle-progress.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-            <script src="~/Content/Admin/assets/vendor/chartjs/Chart.bundle.min.js"></script>
-            <script src="~/Content/Admin/assets/vendor/select2/select2.min.js">
-            </script>
+        <!-- Jquery JS-->
+        <script src="~/Content/Admin/assets/vendor/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap JS-->
+        <script src="~/Content/Admin/assets/vendor/bootstrap-4.1/popper.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <!-- Vendor JS       -->
+        <script src="~/Content/Admin/assets/vendor/slick/slick.min.js">
+        </script>
+        <script src="~/Content/Admin/assets/vendor/animsition/animsition.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/wow/wow.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        </script>
+        <script src="~/Content/Admin/assets/vendor/counter-up/jquery.waypoints.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/counter-up/jquery.counterup.min.js">
+        </script>
+        <script src="~/Content/Admin/assets/vendor/circle-progress/circle-progress.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="~/Content/Admin/assets/vendor/chartjs/Chart.bundle.min.js"></script>
+        <script src="~/Content/Admin/assets/vendor/select2/select2.min.js">
+        </script>
 
-            <!-- Main JS-->
-            <script src="~/Content/Admin/assets/js/main.js"></script>
-</body>
+        <!-- Main JS-->
+        <script src="~/Content/Admin/assets/js/main.js"></script>
+    </body>
 </html>
